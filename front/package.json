@@ -1,0 +1,10 @@
+{
+  "name": "porepore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yuyakoyoshi/porepore.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "porepore start"
+  }
+}
