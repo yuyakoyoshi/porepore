@@ -26,6 +26,15 @@ services:
       - bundle:/usr/local/bundle:delegated
       - node_modules:/app/node_modules
       - tmp-data:/app/tmp/sockets
+  front:
+    build: 
+      context: ./front/
+      dockerfile: Dockerfile
+    volumes:
+      - ./front:/usr/src/app
+    command: sh -c "cd react-sample && yarn start"
+    ports:
+      - "8000:3000"
 
 volumes:
   mysql:
