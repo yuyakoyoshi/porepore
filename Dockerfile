@@ -4,7 +4,7 @@ ENV LANG C.UTF-8
 ENV APP_ROOT /app
 
 RUN apt-get update -qq && \
-    apt-get install -y nodejs yarn    
+    apt-get install -y nodejs yarn
 
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
