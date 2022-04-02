@@ -23,17 +23,15 @@ jobs:
     - name: Setup docker
       shell: bash
       run: |
-        docker-compose run app yarn install --check-files
-        docker-compose run app yarn upgrade
         docker-compose build
-        docker-compose run app rake db:create
+        docker-compose run porepore-web-1 rake db:create
       env:
         RAILS_ENV: test
 
     - name: Run RSpec
       shell: bash
       run:  |
-        docker-compose run app bundle exec rspec
+        docker-compose run porepore-web-1 bundle exec rspec
       env:
         RAILS_ENV: test
     # - name: Set up Ruby
